@@ -36,7 +36,7 @@ function setup() {
 }
 
 function draw() {
-    background(200, 255);
+    background(86, 132, 168);
     mostraBolinha();
     movimentaBolinha();
     verificaColisaoBorda();
@@ -51,6 +51,7 @@ function draw() {
 }
 function mostraBolinha() {
   circle(xBolinha, yBolinha, diametro);
+  fill(color(0.0,139))
 }
 
 function movimentaBolinha() {
@@ -69,7 +70,12 @@ function verificaColisaoBorda() {
 
 function mostraRaquete(x,y) {
     rect(x, y, raqueteComprimento, raqueteAltura);
+  fill(color(255,0,0))
+  
 }
+
+
+
 
 function movimentaMinhaRaquete() {
   if(keyIsDown(UP_ARROW)) {
@@ -113,7 +119,7 @@ function incluiPlacar(){
     rect(150, 10, 40, 20);
     fill(255);
     text(meusPontos, 170, 26);
-    fill(color(0,0, 139));
+    fill(color(255,0, 0));
     rect(450, 10, 40, 20);
     fill(255);
     text(pontosDoOponente, 470, 26);
